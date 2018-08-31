@@ -5,6 +5,4 @@ import 'package:karakkam/screens/login_screen.dart';
 void main() => runApp(new MyApp());
 
 
-//comment
-
-//another commnet
+//comment and changed it for pull
