@@ -1,11 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:karakkam/activities/actvitysection.dart';
-import 'package:karakkam/activities/metasection.dart';
 import 'package:karakkam/activities/popularactivities.dart';
 import 'package:karakkam/model/activity.dart';
-import 'package:karakkam/util/bottomgradient.dart';
 import 'package:karakkam/util/styles.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -68,7 +65,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   List<Activity> _activityList;
-  dynamic _activityDetails;
   bool finished = false;
 
   _loadactivities(){}
@@ -81,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _loadactivities();
     CollectionReference collectionReference = Firestore.instance.collection("activity");
     snp = collectionReference.snapshots().listen((dataSnapshots){
-      Activity activity = null;
+      Activity activity;
 
       for (int i=0; i<dataSnapshots.documents.length; i++ ){
         
@@ -135,6 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
       floatingActionButton: new FloatingActionButton(
         tooltip: 'Increment',
+        onPressed: (){},
         child: new Icon(Icons.search),
       ),
       body: !finished? _loadingView

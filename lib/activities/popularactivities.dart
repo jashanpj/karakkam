@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:karakkam/activities/popular_activity_card.dart';
-import 'package:karakkam/activities/activitycard.dart';
 import 'package:karakkam/model/activity.dart';
 
 

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'dart:async';
 import 'package:karakkam/activities/actvitysection.dart';
-import 'package:karakkam/activities/cross_painter.dart';
 import 'package:karakkam/model/activity.dart';
 import 'package:karakkam/util/styles.dart';
 
@@ -12,7 +9,6 @@ class ActivityDetailScreen extends StatelessWidget {
   ActivityDetailScreen(this._activity);
 
   List<Activity> _activityList;
-  dynamic _activityDetails;
 
   @override
   Widget build(BuildContext context) {
@@ -218,6 +214,7 @@ class ActivityDetailScreen extends StatelessWidget {
           IconButton(
             icon: new Icon(Icons.favorite_border),
             tooltip: 'set as favourite',
+            onPressed: (){},
           ),
           Expanded(
             child: Row(
